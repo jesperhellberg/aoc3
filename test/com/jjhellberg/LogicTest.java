@@ -1,6 +1,9 @@
 package com.jjhellberg;
 
+import org.apache.commons.collections4.BidiMap;
 import org.junit.Test;
+
+import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 
@@ -42,6 +45,13 @@ public class LogicTest {
         int y = result.getY();
         assertEquals(3, x);
         assertEquals(-1, y);
+    }
+
+    @Test
+    public void testBidiMap() {
+        BidiMap<Integer, Coord> test = logic.getMatrix(27);
+        int testKey = test.getKey(new Coord(3,-1));
+        assertEquals(27, testKey);
     }
 
     @Test

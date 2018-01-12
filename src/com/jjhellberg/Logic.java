@@ -1,12 +1,18 @@
 package com.jjhellberg;
 
+import org.apache.commons.collections4.BidiMap;
+import org.apache.commons.collections4.bidimap.DualHashBidiMap;
+
+import java.text.Bidi;
 import java.util.HashMap;
 import java.util.Map;
 
+
+
 public class Logic {
 
-    public Map<Integer, Coord> getMatrix(int max) {
-        Map<Integer, Coord> matrix = new HashMap<>();
+    public BidiMap<Integer, Coord> getMatrix(int max) {
+        BidiMap<Integer, Coord> matrix = new DualHashBidiMap<>();
         Integer squareNumber = 1;
         int x = 0;
         int y = 0;
