@@ -1,6 +1,7 @@
 package com.jjhellberg;
 
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 public class Coord {
     private int x;
     private int y;
